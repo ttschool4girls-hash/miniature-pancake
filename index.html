@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>تم اصطيادك — تدريب وعي إلكتروني</title>
+  <style>
+    body{font-family:Arial,Arial, sans-serif;background:#0e0e10;color:#f2f2f2;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;padding:20px}
+    .card{width:100%;max-width:760px;background:linear-gradient(180deg,#240000,#2b0000);border-radius:16px;padding:28px;box-shadow:0 12px 40px rgba(0,0,0,0.7);text-align:center}
+    h1{margin:0 0 8px;font-size:32px;color:#ff4444}
+    .name{color:#ffd94d;font-weight:700;font-size:22px}
+    p{margin:12px 0;line-height:1.5;color:#ffdcdc}
+    .btn{margin-top:14px;display:inline-block;padding:10px 18px;border-radius:10px;text-decoration:none;background:#ff6b6b;color:#fff;font-weight:700}
+    .tips{text-align:left;margin-top:18px;background:rgba(255,255,255,0.03);border-radius:10px;padding:12px;color:#fff}
+    footer{margin-top:18px;font-size:13px;color:#cfcfcf}
+    ul{padding-left:18px}
+  </style>
+</head>
+<body>
+  <div class="card" role="main" aria-label="صفحة نتيجة اختبار الوعي">
+    <h1>⚠️ تم اصطيادك!</h1>
+
+    <h> عزيزتي منسوبة مدرسة الموهوبين التقنية الثانوية للبنات في المنطقة الشرقية </h>
+    <br>
+    <div class="danger"><strong>إن وعيك الإلكتروني. يحتاج إلى انعاش    </strong><br>انت في خطر!!!</div>
+    <p id="explain"> لعلك بحاجة إلى حضور  اذاعتنا ليوم الخميس 1 جمادى الأولى 1447هـ <br>
+    في حوار أمني  بين المتألقتين يارا المضحي و آية العبادي     <br>باشراف الأستاذتين اسماء الشلاقي و أريج الشهري  <br>  </p>
+    <a href="#" class="btn" onclick="showTips();return false;">عرض نصائح سريعة</a>
+    <div id="tips" class="tips" style="display:none;">
+      <p><strong>نصائح سريعة للحماية:</strong></p>
+      <ul>
+        <li>افحص عنوان الموقع والنطاق قبل الإدخال.</li>
+        <li>لا تدخل كلمات مرور في صفحات غير موثوقة.</li>
+        <li>اشتغل على التحقق الثنائي إن أمكن.</li>
+      </ul>
+      
+    </div> —  ننتظرك بشوق </footer>
+  </div>
+
+<script>
+  function getParam(n){const u=new URLSearchParams(location.search);return u.get(n)||'';}
+  const name = getParam('name');
+  document.getElementById('userName').textContent = name ? decodeURIComponent(name) : 'اسم غير معروف';
+  function showTips(){document.getElementById('tips').style.display='block'}
+</script>
+</body>
+</html>
+
